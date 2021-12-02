@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>VueJS Course</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+  </head>
 
-<head>
-  <title>VueJS Course</title>
-  <link rel="stylesheet" type="text/css" href="main.css" />
-</head>
+  <body>
+    <div id="app" v-cloak>
+      <p><a :href="blogLink" target="_blank">静默's Vlog</a></p>
+      <p v-html="raw_url"></p>
+      <section>
+        <h2>Hi {{userName}}</h2>
+        <p>{{description}}</p>
+      </section>
+      <hr />
+      <label>UserName:</label>
+      <input type="text" v-model="userName" />
+      <label>Description:</label>
+      <input
+        type="text"
+        v-model="description"
+        placeholder="Please input some info"
+      />
+    </div>
 
-<body>
-  <div id="app" v-cloak>
-    <section>
-      <h2>Hi {{userName}}</h2>
-      <p>{{description}}</p>
-    </section>
-    <hr/>
-    <label>UserName:</label>
-    <input type="text" v-model="userName"/>
-    <label>Description:</label>
-    <input type="text" v-model="description" placeholder="Please input some info"/>
-  </div>
-
-  <script src="https://unpkg.com/vue@next"></script>
-  <script src="app.js"></script>
-</body>
-
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
