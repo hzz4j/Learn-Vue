@@ -7,9 +7,10 @@
 
   <body>
     <div id="app" v-cloak>
-      {{count}}
+      {{count}} --- {{username}}
       <button @click="incrementCount">Increment</button>
       <button @click="count--">Decrement</button>
+      <input :value="username" @input.prevent="updateUsername('update last username trigger',$event)"/>
     </div>
 
     <script src="https://unpkg.com/vue@next"></script>
