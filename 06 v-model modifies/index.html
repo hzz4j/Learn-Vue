@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>VueJS Course</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      {{count}} {{typeof count}} --- {{username}}
+      <!-- v-model.number 在处理数据的时候会忽略字母，只关心number -->
+      <input type="number" v-model.number="count" />
+      <!-- 不实时更新，当焦点移除的时候才更新 -->
+      <input v-model.lazy.trim()="username" />
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
