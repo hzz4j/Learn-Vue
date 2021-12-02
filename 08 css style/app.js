@@ -1,8 +1,9 @@
 let vm = Vue.createApp({
   data() {
     return {
-      textColor:"",
+      textColor: "",
       isPurpleSelected: false,
+      size: 150,
     };
   },
   computed: {

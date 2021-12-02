@@ -15,7 +15,16 @@
         <option value="text-black">Black</option>
         <option value="text-orange">Orange</option>
       </select>
-      <div class="circle" :class="[textColor,circle_class]">静默</div>
+      <input type="number" v-model.number="size" />
+      <div
+        class="circle"
+        :class="[textColor,circle_class]"
+        :style="[
+          {width: size+'px',height: size+'px',lineHeight: size+'px'},
+          {transform:'rotate(30deg)'}]"
+      >
+        静默
+      </div>
     </div>
 
     <script src="https://unpkg.com/vue@next"></script>
