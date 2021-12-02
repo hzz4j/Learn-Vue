@@ -2,12 +2,12 @@
 const vm = Vue.createApp({
   data() {
     return {
-      userName: "静默",
+      count: 0,
     };
   },
   methods: {
-    updateUserName(event) {
-      this.userName = event.target.value;
+    incrementCount(event) {
+      this.count++;
     },
   },
 }).mount("#app");

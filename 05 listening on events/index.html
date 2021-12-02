@@ -7,9 +7,9 @@
 
   <body>
     <div id="app" v-cloak>
-      <input type="text" v-model="userName" />
-      <!-- 等价 -->
-      <input type="text" v-model="userName" @input="updateUserName" />
+      {{count}}
+      <button @click="incrementCount">Increment</button>
+      <button @click="count--">Decrement</button>
     </div>
 
     <script src="https://unpkg.com/vue@next"></script>
