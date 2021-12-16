@@ -1,32 +1,19 @@
 <template>
-  <button @click="flag = !flag">Toggle Button</button>
-  <transition name="fade" mode="out-in">
-    <h1 v-if="flag" key="main">Hello Animation</h1>
-    <h1 v-else key="secondary">静默 learning Vue3</h1>
-  </transition>
+  <!-- <BasicTransition /> -->
+  <TransitionWithAnimation />
 </template>
 
 <script>
+// import BasicTransition from "./components/Basic-transition";
+import TransitionWithAnimation from "./components/Transition-with-animation.vue";
 export default {
   name: "App",
-  data() {
-    return {
-      flag: false,
-    };
+  components: {
+    // BasicTransition,
+    TransitionWithAnimation,
   },
 };
 </script>
 
 <style>
-.fade-enter-from {
-  opacity: 0;
-}
-.fade-enter-active,
-.fade-leave-active {
-  transition: all 2.25s linear;
-}
-
-.fade-leave-to {
-  opacity: 0;
-}
 </style>
