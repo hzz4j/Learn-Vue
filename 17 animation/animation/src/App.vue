@@ -1,7 +1,8 @@
 <template>
   <button @click="flag = !flag">Toggle Button</button>
-  <transition name="fade">
-    <h1 v-if="flag">Hello Animation</h1>
+  <transition name="fade" mode="out-in">
+    <h1 v-if="flag" key="main">Hello Animation</h1>
+    <h1 v-else key="secondary">静默 learning Vue3</h1>
   </transition>
 </template>
 
@@ -25,8 +26,7 @@ export default {
   transition: all 2.25s linear;
 }
 
-.fade-leave-to{
+.fade-leave-to {
   opacity: 0;
 }
-
 </style>
